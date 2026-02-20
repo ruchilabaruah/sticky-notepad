@@ -8,6 +8,55 @@
   background-color: #fefefe;
 }
 
+.note {
+  position: absolute;
+  margin: auto;
+  width: 170px;
+  height: 150px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 8px;
+  box-sizing: border-box;
+  cursor: grab;
+  user-select: none;
+  transition: box-shadow 0.1s ease;
+}
+
+.note:hover {
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+.note-textarea {
+  width: 90%;
+  height: 100%;
+  border: none;
+  resize: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 16px;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover .icon-close {
+  transform: rotate(90deg);
+  color: #d9534f;
+}
+
 .add-note-btn {
   position: fixed;
   bottom: 30px;
@@ -31,6 +80,11 @@
 .add-note-btn:hover {
   background-color: #085197;
   transform: scale(1.05);
+}
+
+.icon-close {
+  color: #333;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* Icon Styling */
