@@ -1,0 +1,45 @@
+.container {
+  width: 600px;
+  min-height: 550px;
+  border: 2px solid #000000;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fefefe;
+}
+
+.add-note-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #063c68;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-note-btn:hover {
+  background-color: #085197;
+  transform: scale(1.05);
+}
+
+/* Icon Styling */
+.icon-add { 
+  color: #ffffff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.add-note-btn:hover .icon-add {
+  transform: rotate(90deg);
+  color: #e0e0e0;
+}
