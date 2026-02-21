@@ -5,3 +5,4 @@ Steps:
 3. Define a palette of pastel colors and a function to assign random colors to new notes.
 4. Add a function to calculate position of a new sticky note.
 5. Add note to the list of notes using the above two functions.
+6. Implement dragging behavior.
