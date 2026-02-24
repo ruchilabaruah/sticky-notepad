@@ -126,6 +126,17 @@ function StickyNotepad() {
     );
   };
 
+  const removeNote = (e, id) => {
+    e.stopPropagation();
+    return setNotes((prev) => prev.filter((note) => note.id !== id));
+  };
+
+  const updateText = (id, value) => {
+    setNotes((prev) =>
+      prev.map((note) => (note.id === id ? { ...note, text: value } : note)),
+    );
+  };
+
   return (
     <div
       className="container"
@@ -146,7 +157,7 @@ function StickyNotepad() {
                 ) + 30,
         }}
       >
-        {notes.map(({ id, color, position }, index) => (
+        {notes.map(({ id, color, text, position }, index) => (
           <div
             key={id}
             className="note"
@@ -160,10 +171,20 @@ function StickyNotepad() {
             }}
             onMouseDown={(e) => onMouseDown(e, id)}
           >
-            <button className="close-btn">
+            <button
+              className="close-btn"
+              onClick={(e) => removeNote(e, id)}
+              onMouseDown={(e) => e.stopPropagation()}
+            >
               <X className="icon-close" />
             </button>
-            <textarea className="note-textarea" />
+            <textarea
+              className="note-textarea"
+              placeholder="Enter text"
+              value={text}
+              onChange={(e) => updateText(id, e.target.value)}
+              onMouseDown={(e) => e.stopPropagation()}
+            />
           </div>
         ))}
       </div>

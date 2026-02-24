@@ -6,3 +6,5 @@ Steps:
 4. Add a function to calculate position of a new sticky note.
 5. Add note to the list of notes using the above two functions.
 6. Implement dragging behavior.
+7. Implement remove sticky note behaviour.
+8. Implement add text to textarea in sticky note behaviour.
